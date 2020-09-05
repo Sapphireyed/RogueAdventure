@@ -11,11 +11,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="index.js"></script>
 <style>
-
+.next {display:none}
 </style>
 </head>
 
-<body>
+<body class="w3-theme-l4">
 <header>
 <nav class="w3-top">
 <div class="w3-mobile w3-bar w3-theme w3-row w3-card">
@@ -93,19 +93,59 @@
 </header>
 
 <div><br><br></div>
-<div class="w3-container w3-row w3-theme-l3 w3-margin-top">
-  <div class="w3-animate-zoom w3-center mainscreenimg" style="position:relative">
-    <img class="w3-padding-16 logo w3-theme-l3"
-         src="https://rogueadventu.re/wp-content/uploads/2014/09/title_home.png" alt="logo">
+
+<section class="slideshow" style="position:relative">
+
+<div class="w3-container w3-row w3-margin-top mainscreen">
+  <div class="w3-animate-zoom w3-center mainscreenimg w3-card-4" style="">
+    <img class="w3-padding-24 logo"
+         src="https://rogueadventu.re/wp-content/uploads/2014/09/title_home.png" alt="logo"
+         style="max-width: 100%">
   </div>
-  <div class=" mainscreentext w3-col s6" style="margin: 110px 0 150px 0; display:none">
-    <div class="maintext w3-center" style="width:40%;height:62%">
-      <h1>tyftyftyf</h1>
-      <h4>ytfytfty</h4>
+  <div class="mainscreentext w3-col s6 " style="margin: 90px 0 150px 0; display:none">
+    <div class="w3-mobile maintext w3-center w3-padding-large w3-card w3-padding-24" style="width:40%;">
+      <h1 class="w3-xxlarge w3-text-orange"><b>Rogue Adventure</b></h1>
+      <h4><br>Enter the world of Rogue Adventure,<br>
+        an incredible fusion of
+        turn-based deck-builder card game,<br>
+        RPG and rogue-like,<br>
+        with an old style game pixel graphic.<br>
+        <br>
+        Build your deck, explore dangerous worlds and fight deadly enemies.<br>
+        <br>
+        Defeat the final boss, or die trying.</h4>
+        <a href="https://play.google.com/store/apps/details?id=it.sharklab.rogueadventure&gl" target="_blank">
+        <img src="img/google.png" alt="Get it on Google Play" style="max-width:100%"></a>
     </div>
   </div>
 </div>
 
+  <div class="w3-container w3-row w3-margin-top w3-theme-l4 mainscreen next">
+    <div class="mainscreenimg1">
+      <img class="w3-padding-16 deck w3-card-4"
+           src="img/builddeck.png" alt="deck"
+           style="max-width: 100%; position:absolute; margin-top: 90px; margin-left:9%">
+    </div>
+    <div class="mainscreentext w3-col s6 " style="margin: 90px 0 150px 0; display:none">
+      <div class="w3-mobile maintext w3-center w3-padding-large w3-card w3-padding-24" style="width:40%;">
+        <h1 class="w3-xxlarge w3-text-orange"><b>Build deck</b></h1>
+        <h4><br>Over 150 cards to choose from.<br>
+          <br>
+          Five different races.<br>
+          <br>
+          Combine cards, skils and abilities, find best synergies<br>
+          <br>
+          Destroy your enemies<br>
+          <br>
+          Or die trying</h4>
+
+          <a href="https://play.google.com/store/apps/details?id=it.sharklab.rogueadventure&gl" target="_blank">
+          <img src="img/google.png" alt="Get it on Google Play" style="max-width:100%"></a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
 
 <br><br><br><br>
