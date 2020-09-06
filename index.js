@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
   $(".menuall").click(function() {
     $(".submenu").toggle()
@@ -10,37 +9,52 @@ $(document).ready(function() {
   function shrinkLogo() {
     var x = window.matchMedia("(min-width: 700px)")
     if ( x.matches) {
-      $(".logo").animate({width: '40%'},1000);
-      $(".logo").animate({left: "-123px"}, 1000);
-      $(".mainscreenimg").removeClass("w3-center");
-      $(".mainscreenimg").removeClass("w3-animate-zoom");
-      $(".mainscreentext").show(1000)
-      $(".maintext").css({"position": "absolute", "right":"10%"});
-      $(".logo").addClass("w3-card-4")
-      $(".logo").css({"position": "absolute", "margin-top":"90px","margin-left":"18%"});
-
-
+      $(".logo").animate({width: '45%', left: "-227px"},1000);
+      $(".logo").fadeOut(4000);
   } else {
-      $(".mainscreentext").css({"width":"100%", "margin-top": "0"})
-      $(".mainscreentext").show("slow");
-      $(".logo").addClass("w3-card-4");
+      $(".logo").fadeOut(4000);
   }
   };
-  let start = setTimeout(shrinkLogo, 1000)
+  function firstSlide() {
+    var x = window.matchMedia("(min-width: 700px)")
+    if ( x.matches) {
+      $(".mainscreen").fadeIn(2000);
+  } else {
+    $(".mainscreen").fadeIn(1500);
+  }
+  };
+//  function slideFade() {
+//    $(".mainscreen").fadeOut(2000)
+//  };
+  var i =0;
+    function slideIn () {
+      var index;
+      var slides = document.getElementsByClassName("mainscreen");
+      for (index = 0; index < slides.length; index++) {
+        slides[index].style.display = "none";
+      i++;
+      if (i > slides.length) {i = 1};
+      slides[i-1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+      }
+    }
+  let slidein = setInterval(slideIn, 4000);
+//  let slidefade = setInterval(slideFade, 5000);
+  let firstslide = setTimeout(firstSlide, 2000)
+  let logostart = setTimeout(shrinkLogo, 1000)
 });
 
-//slideshow on thetop ofpage
-var slideIndex = 0;
-let slideshow = setInterval(showSlides, 3000);
+// First slide shows up
+//$(document).ready(function() {
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mainscreen");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
+//});
 
-}
+//slideshow on the top of the page
+//$(document).ready(function() {
+
+//});
+
+
+
+
+//});

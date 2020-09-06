@@ -11,7 +11,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="index.js"></script>
 <style>
-.next {display:none}
+.logo {margin-top: 17px}
+.mainscreen {display:none}
+.mainscreen h1 {display:none}
+@media only screen and (min-width: 700px) {
+  .logo {margin: 116px 0 0 20%}
+  .mainscreen {
+  margin: 100px 5% 0 5%;
+  }
+  .mainscreen h1 {display:block}
+  }
+  .maintext {
+    padding: 28px 48px;
+  }
 </style>
 </head>
 
@@ -94,16 +106,20 @@
 
 <div><br><br></div>
 
-<section class="slideshow" style="position:relative">
+<div class="w3-animate-zoom w3-row w3-center" style="position: relative">
+<img class="logo w3-cell"
+     src="https://rogueadventu.re/wp-content/uploads/2014/09/title_home.png" alt="logo"
+     style="max-width: 100%; position:absolute;">
+</div>
+<section class="slideshow"style="position:relative">
 
-<div class="w3-container w3-row w3-margin-top mainscreen">
-  <div class="w3-animate-zoom w3-center mainscreenimg w3-card-4" style="">
-    <img class="w3-padding-24 logo"
+<div class="mainscreen w3-center w3-row">
+  <div class="w3-half w3-card-4 w3-padding-16">
+    <img class=""
          src="https://rogueadventu.re/wp-content/uploads/2014/09/title_home.png" alt="logo"
          style="max-width: 100%">
   </div>
-  <div class="mainscreentext w3-col s6 " style="margin: 90px 0 150px 0; display:none">
-    <div class="w3-mobile maintext w3-center w3-padding-large w3-card w3-padding-24" style="width:40%;">
+  <div class="maintext w3-half w3-card-4">
       <h1 class="w3-xxlarge w3-text-orange"><b>Rogue Adventure</b></h1>
       <h4><br>Enter the world of Rogue Adventure,<br>
         an incredible fusion of
@@ -120,14 +136,12 @@
   </div>
 </div>
 
-  <div class="w3-container w3-row w3-margin-top w3-theme-l4 mainscreen next">
-    <div class="mainscreenimg1">
-      <img class="w3-padding-16 deck w3-card-4"
-           src="img/builddeck.png" alt="deck"
-           style="max-width: 100%; position:absolute; margin-top: 90px; margin-left:9%">
+  <div class="mainscreen w3-center w3-row next">
+    <div class="mainscreenimg1 w3-half w3-card-4 w3-padding-16">
+      <img class="" src="img/builddeck.png" alt="deck"
+           style="max-width: 100%;position:relative">
     </div>
-    <div class="mainscreentext w3-col s6 " style="margin: 90px 0 150px 0; display:none">
-      <div class="w3-mobile maintext w3-center w3-padding-large w3-card w3-padding-24" style="width:40%;">
+    <div class="maintext w3-half w3-card-4 w3-padding-16">
         <h1 class="w3-xxlarge w3-text-orange"><b>Build deck</b></h1>
         <h4><br>Over 150 cards to choose from.<br>
           <br>
