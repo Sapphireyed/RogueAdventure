@@ -12,8 +12,8 @@
 <script src="index.js"></script>
 <style>
 .logo {margin-top: 17px}
-.mainscreen {display:none;}
 #first {opacity: 0}
+.mainscreen {position:absolute;}
 .mainscreen h1 {display:none}
 @media only screen and (min-width: 700px) {
   .logo {margin: 116px 0 0 20%}
@@ -112,7 +112,8 @@
      src="https://rogueadventu.re/wp-content/uploads/2014/09/title_home.png" alt="logo"
      style="max-width: 100%; position:absolute;">
 </div>
-<section class="slideshow"style="position:relative">
+
+<section class="slideshow" style="position:relative; height: 529px">
 
 <div class="mainscreen w3-center w3-row" id="first">
   <div class="w3-half w3-card-4 w3-padding-16">
@@ -135,12 +136,12 @@
         <img src="img/google.png" alt="Get it on Google Play" style="max-width:100%"></a>
     </div>
   </div>
-</div>
 
-  <div class="mainscreen w3-center w3-row next">
-    <div class="mainscreenimg1 w3-half w3-card-4 w3-padding-16">
+
+  <div class="mainscreen w3-center w3-row">
+    <div class="w3-half w3-card-4 w3-padding-16">
       <img class="" src="img/builddeck.png" alt="deck"
-           style="max-width: 100%;position:relative">
+           style="max-width: 100%">
     </div>
     <div class="maintext w3-half w3-card-4">
         <h1 class="w3-xxlarge w3-text-orange"><b>Build deck</b></h1>
@@ -163,6 +164,8 @@
   </div>
 </div>
 </section>
+
+
 
 
 <br><br><br><br>

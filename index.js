@@ -4,12 +4,14 @@ $(document).ready(function() {
   });
 });
 
+// fadein first screen animation
 $(document).ready(function(){
     var o = 0;
   function opacityIn(){
     var el = document.getElementById("first");
-
-    if (o < 0.004) {
+    if (o == 1) {
+      clerInterval(opacity);
+    } else if (o < 0.004) {
       o = o + 0.0001;
       el.style.opacity = o;
     } else if (o < 0.7) {
@@ -20,62 +22,34 @@ $(document).ready(function(){
       el.style.opacity = o;
     }
   }
-//  let start = setTimeout(function() {
   let opacity = setInterval(opacityIn, 50)
-//},1000)
+
 })
-// starting animation on page load
+
 $(document).ready(function() {
+  // starting animation on page load
   function shrinkLogo() {
     var x = window.matchMedia("(min-width: 700px)")
     if ( x.matches) {
-      $(".logo").animate({width: '45%', left: "-227px"},1000);
+      $(".logo").animate({width: '45%', left: "-227px"},1500);
       $(".logo").fadeOut(3000);
   } else {
-      $(".logo").fadeOut(3000);
+      $(".logo").fadeOut(4000);
   }
   };
-  function firstSlide() {
-    var x = window.matchMedia("(min-width: 700px)")
-    if ( x.matches) {
-      $(".mainscreen").fadeIn(2000);
-  } else {
-     $(".mainscreen").fadeIn(1500);
-  }
-  };
-//  function slideFade() {
-//    $(".mainscreen").fadeOut(2000)
-//  };
-var slideIndex = 0;
-showSlides();
+    let logostart = setTimeout(shrinkLogo, 1000)
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mainscreen");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 4500); // Change image every 2 seconds
-}
-//  let slidefade = setInterval(slideFade, 5000);
-//  let firstslide = setTimeout(firstSlide, 2000)
-  let logostart = setTimeout(shrinkLogo, 1000)
+//  var slides = document.getElementsByClassName("mainscreen");
 });
+$(document).ready(function() {
+$(".mainscreen:gt(0)").hide()
 
-// First slide shows up
-//$(document).ready(function() {
-
-//});
-
-//slideshow on the top of the page
-//$(document).ready(function() {
-
-//});
-
-
-
-
-//});
+setInterval(function() {
+  $('.slideshow > .mainscreen:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(2000)
+    .end()
+    .appendTo('.slideshow');
+}, 5000);
+});
