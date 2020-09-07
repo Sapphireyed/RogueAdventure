@@ -12,7 +12,8 @@
 <script src="index.js"></script>
 <style>
 .logo {margin-top: 17px}
-.mainscreen {display:none}
+.mainscreen {display:none;}
+#first {opacity: 0}
 .mainscreen h1 {display:none}
 @media only screen and (min-width: 700px) {
   .logo {margin: 116px 0 0 20%}
@@ -113,7 +114,7 @@
 </div>
 <section class="slideshow"style="position:relative">
 
-<div class="mainscreen w3-center w3-row">
+<div class="mainscreen w3-center w3-row" id="first">
   <div class="w3-half w3-card-4 w3-padding-16">
     <img class=""
          src="https://rogueadventu.re/wp-content/uploads/2014/09/title_home.png" alt="logo"
@@ -141,17 +142,19 @@
       <img class="" src="img/builddeck.png" alt="deck"
            style="max-width: 100%;position:relative">
     </div>
-    <div class="maintext w3-half w3-card-4 w3-padding-16">
+    <div class="maintext w3-half w3-card-4">
         <h1 class="w3-xxlarge w3-text-orange"><b>Build deck</b></h1>
         <h4><br>Over 150 cards to choose from.<br>
+          Five different races plus multiple neutral allies.<br>
+          Defence, offence, buffs and so much more.<br>
           <br>
-          Five different races.<br>
+          Endless possibilities<br>
           <br>
-          Combine cards, skils and abilities, find best synergies<br>
+
+          Combine cards, skils and abilities to find best synergies<br>
+          that will help you on your adventure.
           <br>
-          Destroy your enemies<br>
-          <br>
-          Or die trying</h4>
+          <br></h4>
 
           <a href="https://play.google.com/store/apps/details?id=it.sharklab.rogueadventure&gl" target="_blank">
           <img src="img/google.png" alt="Get it on Google Play" style="max-width:100%"></a>
