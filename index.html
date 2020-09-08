@@ -12,9 +12,33 @@
 <script src="index.js"></script>
 <style>
 .logo {margin-top: 17px}
-#first {opacity: 0}
-.mainscreen {position:absolute;}
+.mainscreen {
+  display: none;
+  position:absolute;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 .mainscreen h1 {display:none}
+
+@keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  padding: 18px;
+  color: #4b3a2a;
+  font-weight: bold;
+  font-size: 22px;
+  z-index: 1;
+  display:none;
+}
+.next {right: 0;}
 @media only screen and (min-width: 700px) {
   .logo {margin: 116px 0 0 20%}
   .mainscreen {
@@ -114,8 +138,9 @@
 </div>
 
 <section class="slideshow" style="position:relative; height: 529px">
-
-<div class="mainscreen w3-center w3-row" id="first">
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<div class="mainscreen w3-center w3-row" id="first" style="display:none">
   <div class="w3-half w3-card-4 w3-padding-16">
     <img class=""
          src="https://rogueadventu.re/wp-content/uploads/2014/09/title_home.png" alt="logo"
@@ -137,6 +162,29 @@
     </div>
   </div>
 
+  <div class="mainscreen w3-center w3-row">
+    <div class="w3-half w3-card-4 w3-padding-16">
+      <img class="" src="img/classes.png" alt="deck"
+           style="max-width: 100%">
+    </div>
+    <div class="maintext w3-half w3-card-4">
+        <h1 class="w3-xxlarge w3-text-orange"><b>Choose your class</b></h1>
+        <h4><br>Choose one out of 10 completly unique classes.<br>
+          Each with a custom ability, upgrade and deck.<br>
+          Unlocks class-specific bonuses.<br>
+          <br>
+          Playing ach class gives a new experience.<br>
+          <br>
+
+          Try them all<br>
+          Find your favorite one!
+          <br>
+          <br></h4>
+
+          <a href="https://play.google.com/store/apps/details?id=it.sharklab.rogueadventure&gl" target="_blank">
+          <img src="img/google.png" alt="Get it on Google Play" style="max-width:100%"></a>
+      </div>
+    </div>
 
   <div class="mainscreen w3-center w3-row">
     <div class="w3-half w3-card-4 w3-padding-16">
@@ -153,7 +201,7 @@
           <br>
 
           Combine cards, skils and abilities to find best synergies<br>
-          that will help you on your adventure.
+          to will help you on your adventure.
           <br>
           <br></h4>
 
@@ -161,8 +209,31 @@
           <img src="img/google.png" alt="Get it on Google Play" style="max-width:100%"></a>
       </div>
     </div>
-  </div>
-</div>
+
+    <div class="mainscreen w3-center w3-row">
+      <div class="w3-half w3-card-4 w3-padding-16">
+        <img class="" src="img/skills.png" alt="deck"
+             style="max-width: 100%">
+      </div>
+      <div class="maintext w3-half w3-card-4">
+          <h1 class="w3-xxlarge w3-text-orange"><b>Learn powerful skills</b></h1>
+          <h4><br>Numerous skills can make any deck much stronger.<br>
+            The game offers multiple skills for various<br>
+            play-styles and decks<br>
+            <br>
+            Skills are a valuable addition to every deck.<br>
+            <br>
+
+            Well combined skills synergiziing with cards and abilities<br>
+            will make you invincible.
+            <br>
+            <br></h4>
+
+            <a href="https://play.google.com/store/apps/details?id=it.sharklab.rogueadventure&gl" target="_blank">
+            <img src="img/google.png" alt="Get it on Google Play" style="max-width:100%"></a>
+        </div>
+      </div>
+
 </section>
 
 

@@ -17,6 +17,7 @@ $(document).ready(function(){
     } else if (o < 0.7) {
       o = o + 0.025
       el.style.opacity = o;
+      el.style.display = "block"
     } else {
       o += 0.1;
       el.style.opacity = o;
@@ -31,7 +32,7 @@ $(document).ready(function() {
   function shrinkLogo() {
     var x = window.matchMedia("(min-width: 700px)")
     if ( x.matches) {
-      $(".logo").animate({width: '45%', left: "-227px"},1500);
+      $(".logo").animate({width: '45%', left: "-227px"},1350);
       $(".logo").fadeOut(3000);
   } else {
       $(".logo").fadeOut(4000);
@@ -39,17 +40,45 @@ $(document).ready(function() {
   };
     let logostart = setTimeout(shrinkLogo, 1000)
 
-//  var slides = document.getElementsByClassName("mainscreen");
+ setTimeout(function(){
+   $(".prev, .next").fadeIn(1000);
+ }, 1500)
 });
-$(document).ready(function() {
-$(".mainscreen:gt(0)").hide()
+//$(document).ready(function() {
+//$(".mainscreen:gt(0)").hide()
 
-setInterval(function() {
-  $('.slideshow > .mainscreen:first')
-    .fadeOut(1000)
-    .next()
-    .fadeIn(2000)
-    .end()
-    .appendTo('.slideshow');
-}, 5000);
-});
+//setInterval(function() {
+//  $('.slideshow > .mainscreen:first')
+//    .hide()
+//    .next()
+//    .show()
+//    .end()
+//    .appendTo('.slideshow');
+//}, 5000);
+//});
+
+var slideIndex = 0;
+showSlides();
+var slides;
+
+function showSlides() {
+    var i;
+    slides = document.getElementsByClassName("mainscreen");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+           slides[slideIndex-1].style.display = "block";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    setTimeout(showSlides, 4000); // Change image every 8 seconds
+}
+
+function plusSlides(n) {
+    slideIndex += n;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    else if(slideIndex<1){slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+}
