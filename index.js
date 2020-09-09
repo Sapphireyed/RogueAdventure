@@ -24,11 +24,10 @@ $(document).ready(function(){
     }
   }
   let opacity = setInterval(opacityIn, 50)
-
 })
 
+//logo zoom in, shrinks and goes to its end position. Starting on page load
 $(document).ready(function() {
-  // starting animation on page load
   function shrinkLogo() {
     var x = window.matchMedia("(min-width: 700px)")
     if ( x.matches) {
@@ -60,7 +59,7 @@ $(document).ready(function() {
 var slideIndex = 0;
 showSlides();
 var slides;
-
+//Automaticslideshow
 function showSlides() {
     var i;
     slides = document.getElementsByClassName("mainscreen");
@@ -70,9 +69,10 @@ function showSlides() {
     }
     slideIndex++;
     if (slideIndex> slides.length) {slideIndex = 1}
-    setTimeout(showSlides, 4000); // Change image every 8 seconds
+    setTimeout(showSlides, 4000);
 }
 
+// Changing slides on next andprev buttons
 function plusSlides(n) {
     slideIndex += n;
     if (slideIndex> slides.length) {slideIndex = 1}
@@ -82,3 +82,14 @@ function plusSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";
 }
+
+//display description of cards/bonuses
+$(document).ready(function() {
+  $(".class button").each(function(){
+    $(this).on("click", function(){
+     if ($(this).val() == "deck") {
+       $(".deck").toggle();
+     }
+    })
+  })
+})
