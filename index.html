@@ -18,8 +18,9 @@
   animation-name: fade;
   animation-duration: 1.5s;
 }
-.mainscreen h1 {display:none}
-
+.mainscreen h1 {display:none;}
+.mainscreen div:first-child {width:50%}
+.maintext {padding: 0 12px}
 @keyframes fade {
   from {opacity: 0}
   to {opacity: 1}
@@ -45,10 +46,13 @@
   margin: 100px 5% 0 5%;
   }
   .mainscreen h1 {display:block}
+  .maintext {padding: 28px 48px;}
+  .mainimg {
+    vertical-align: top;
+    margin-top: -50px
   }
-  .maintext {
-    padding: 28px 48px;
   }
+
 </style>
 </head>
 
@@ -137,16 +141,17 @@
      style="max-width: 100%; position:absolute;">
 </div>
 
-<section class="slideshow" style="position:relative; height: 529px">
+<section class="slideshow" style="position:relative; height: 600px">
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
 <div class="mainscreen w3-center w3-row" id="first" style="display:none">
-  <div class="w3-half w3-card-4 w3-padding-16">
-    <img class=""
+  <div class="w3-mobile w3-card-4 w3-padding-16 w3-cell">
+    <img class="mainimg"
          src="https://rogueadventu.re/wp-content/uploads/2014/09/title_home.png" alt="logo"
-         style="max-width: 100%">
+         style="max-width: 100%;">
   </div>
-  <div class="maintext w3-half w3-card-4">
+  <div class="w3-mobile maintext w3-card-4 w3-cell">
       <h1 class="w3-xxlarge w3-text-orange"><b>Rogue Adventure</b></h1>
       <h4><br>Enter the world of Rogue Adventure,<br>
         an incredible fusion of
@@ -163,11 +168,11 @@
   </div>
 
   <div class="mainscreen w3-center w3-row">
-    <div class="w3-half w3-card-4 w3-padding-16">
-      <img class="" src="img/classes.png" alt="deck"
+    <div class="w3-mobile w3-cell w3-card-4 w3-padding-16">
+      <img class="mainimg" src="img/classes.png" alt="deck"
            style="max-width: 100%">
     </div>
-    <div class="maintext w3-half w3-card-4">
+    <div class=" w3-mobile maintext w3-cell w3-card-4">
         <h1 class="w3-xxlarge w3-text-orange"><b>Choose your class</b></h1>
         <h4><br>Choose one out of 10 completly unique classes.<br>
           Each with a custom ability, upgrade and deck.<br>
@@ -187,11 +192,11 @@
     </div>
 
   <div class="mainscreen w3-center w3-row">
-    <div class="w3-half w3-card-4 w3-padding-16">
-      <img class="" src="img/builddeck.png" alt="deck"
+    <div class="w3-mobile w3-cell w3-card-4 w3-padding-16">
+      <img class="mainimg" src="img/builddeck.png" alt="deck"
            style="max-width: 100%">
     </div>
-    <div class="maintext w3-half w3-card-4">
+    <div class="w3-mobile maintext w3-cell w3-card-4">
         <h1 class="w3-xxlarge w3-text-orange"><b>Build deck</b></h1>
         <h4><br>Over 150 cards to choose from.<br>
           Five different races plus multiple neutral allies.<br>
@@ -211,11 +216,11 @@
     </div>
 
     <div class="mainscreen w3-center w3-row">
-      <div class="w3-half w3-card-4 w3-padding-16">
-        <img class="" src="img/skills.png" alt="deck"
+      <div class="w3-mobile w3-cell w3-card-4 w3-padding-16">
+        <img class="mainimg" src="img/skills.png" alt="deck"
              style="max-width: 100%">
       </div>
-      <div class="maintext w3-half w3-card-4">
+      <div class="w3-mobile maintext w3-cell w3-card-4">
           <h1 class="w3-xxlarge w3-text-orange"><b>Learn powerful skills</b></h1>
           <h4><br>Numerous skills can make any deck much stronger.<br>
             The game offers multiple skills for various<br>

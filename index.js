@@ -32,8 +32,8 @@ $(document).ready(function() {
   function shrinkLogo() {
     var x = window.matchMedia("(min-width: 700px)")
     if ( x.matches) {
-      $(".logo").animate({width: '45%', left: "-227px"},1350);
-      $(".logo").fadeOut(3000);
+      $(".logo").animate({width: '45%', left: "-15%"},1350);
+      $(".logo").fadeOut(2500);
   } else {
       $(".logo").fadeOut(4000);
   }
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
  setTimeout(function(){
    $(".prev, .next").fadeIn(1000);
- }, 1500)
+ }, 2000)
 });
 //$(document).ready(function() {
 //$(".mainscreen:gt(0)").hide()
