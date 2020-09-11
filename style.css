@@ -18,7 +18,8 @@ nav {position: relative}
 .navcaption {display:block}
 
 /* links */
-nav a {text-decoration:none}
+a {text-decoration:none}
+
 
 /* big screens */
 @media only screen and (min-width: 600px) {
