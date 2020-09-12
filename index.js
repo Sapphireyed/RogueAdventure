@@ -31,9 +31,10 @@ $(document).ready(function() {
   function shrinkLogo() {
     var x = window.matchMedia("(min-width: 700px)")
     if ( x.matches) {
-      $(".logo").animate({width: '45%', left: "-15%"},1350);
+      $(".logo").animate({width: '45%', left: "-15%", padding: "20px"},1350);
       $(".logo").fadeOut(2500);
   } else {
+      $(".logo").animate({padding: "20px"},1350);
       $(".logo").fadeOut(4000);
   }
   };
@@ -91,10 +92,10 @@ $(document).ready(function() {
     $(this).on("click", function(){
      if ($(this).val() == "deck") {
        $(".bonuses, .more, .deck").not($(this).parent().find(".deck")).hide();
-       $(this).parent().find(".deck").toggle()
+       $(this).parent().find(".deck").slideToggle("slow")
      } else if ($(this).val() == "bonuses") {
        $(".more, .bonuses, .deck").not($(this).parent().find(".bonuses")).hide();
-       $(this).parent().find(".bonuses").toggle()
+       $(this).parent().find(".bonuses").slideToggle("slow")
    }
     })
   })
@@ -105,11 +106,11 @@ $(document).ready(function() {
       $(this).on("click", function(){
         if ($(this).val() == "deck") {
        $(".bonusesmobile, .moremobile, .deckmobile").not($(this).parent().find(".deckmobile")).hide();
-       $(this).parent().find(".deckmobile").toggle();
+       $(this).parent().find(".deckmobile").slideToggle("slow");
 //       $(this).parent().find("div:first-child").toggle();
      } else if ($(this).val() == "bonuses") {
        $(".deckmobile, .moremobile, .bonusesmobile").not($(this).parent().find(".bonusesmobile")).hide();
-       $(this).parent().find(".bonuses").toggle()
+       $(this).parent().find(".bonuses").slideToggle("slow")
 //       $(this).parent().find("div:first-child").toggle();
    }
    })
