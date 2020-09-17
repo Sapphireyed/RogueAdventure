@@ -30,7 +30,8 @@ function comment() {
             icon: "https://rogueadventu.re/wp-content/uploads/2020/03/choose_warrior.png",
             likes: 0,
             comments: {
-              content: '"uno commento"'
+              content: '',
+              name: ""
             }
           },
           {
@@ -40,7 +41,8 @@ function comment() {
             icon: "https://rogueadventu.re/wp-content/uploads/2020/03/choose_assassin.png",
             likes: 0,
             comments: {
-              content: '"1st comment"'
+              content: '',
+              name: ""
             }
           },
           {
@@ -50,7 +52,8 @@ function comment() {
             icon: "https://rogueadventu.re/wp-content/uploads/2020/03/choose_paladin.png",
             likes: 0,
             comments: {
-            content: '"first comment"'
+              content: '',
+              name: ""
             }
           },
         ]
@@ -58,6 +61,7 @@ function comment() {
           this.class.likes += 1;
         }
         $scope.addComment = function(){
-          this.class.comments.content = '"' + this.newComment + '"'  + '\n\n' + this.class.comments.content
+          if (this.newName == undefined) {this.newName = ""}
+          this.class.comments.content = '"' + this.newContent + '"'  + '\n'+ this.newName  + '\n\n' + this.class.comments.content + this.class.comments.name + '\n\n'
         }
         });
