@@ -63,7 +63,7 @@ header {
         <div class="w3-mobile w3-col w3-padding-small w3-center" style="width:40%">
           <form id="commentHere">
           <label for="commentHereContent">Leave a comment</label><br>
-          <textarea cols="35" rows="6" ng-model="newContent"></textarea><br>
+          <textarea cols="35" rows="6" maxlength="160" ng-model="newContent"></textarea><br>
           <label for="commentHereName">Name</;abel>
           <input type="text" value="" id="commentHereName" ng-model="newName">
           <input type="submit" value="submit" onclick="comment()" ng-click="addComment($index)">
